@@ -68,8 +68,8 @@ RUN apk add --no-cache ${RUNTIME_DEPENDENCIES}                                  
     xargs apk add --no-cache < ${PREFIX_DIR}/DEPENDENCIES                                                                                                                           && \
     adduser -h /config -s /bin/nologin -u 99 -D abc                                                                                                                                 && \
     adduser -h /opt/tomcat -s /bin/false -D tomcat                                                                                                                                  && \
-    TOMCAT_VERSION=$(wget -qO- https://tomcat.apache.org/download-10.cgi | grep "10\.1\.[0-9]\+</a>" | sed -e 's|.*>\(.*\)<.*|\1|g')                                                 && \
-    wget https://dlcdn.apache.org/tomcat/tomcat-10/v"$TOMCAT_VERSION"/bin/apache-tomcat-"$TOMCAT_VERSION".tar.gz                                                                     && \
+    TOMCAT_VERSION=$(wget -qO- https://tomcat.apache.org/download-90.cgi | grep "9\.0\.[0-9]\+</a>" | sed -e 's|.*>\(.*\)<.*|\1|g')                                                 && \
+    wget https://dlcdn.apache.org/tomcat/tomcat-9/v"$TOMCAT_VERSION"/bin/apache-tomcat-"$TOMCAT_VERSION".tar.gz                                                                     && \
     tar -xf apache-tomcat-"$TOMCAT_VERSION".tar.gz                                                                                                                                  && \
     mv apache-tomcat-"$TOMCAT_VERSION"/* /opt/tomcat                                                                                                                                && \
     rmdir apache-tomcat-"$TOMCAT_VERSION"                                                                                                                                           && \
