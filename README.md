@@ -1,7 +1,7 @@
 Guacamole
 ====
 
-Dockerfile for Guacamole 0.9.13 with embedded MariaDB (MySQL) and LDAP authentication
+Dockerfile for Guacamole 1.5.4 with embedded MariaDB (MySQL) and LDAP authentication
 
 Guacamole is a clientless remote desktop gateway. It supports standard protocols like VNC and RDP.
 
